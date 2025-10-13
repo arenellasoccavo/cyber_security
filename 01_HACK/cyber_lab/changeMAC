@@ -1,0 +1,19 @@
+import subprocess  # Modulo per eseguire comandi di sistema
+
+# Punto di ingresso principale dello script
+if __name__ == "__main__":
+
+    interfaccia = "eth0"           # Nome dell'interfaccia di rete (es: "eth0" su Linux)
+    nuovo_mac = "00:11:22:33:44:55"  # Nuovo indirizzo MAC da assegnare
+
+    # Spegnimento della scheda di rete (necessario per cambiare il MAC)
+    print("Script in esecuzione, spegnimento scheda di rete...")
+    subprocess.run(["ip", "link", "set", interfaccia, "down"])
+
+    # Cambiamento dell'indirizzo MAC
+    print(f"Cambiamento dell'indirizzo MAC dell'interfaccia {interfaccia} a {nuovo_mac}")
+    subprocess.run(["ip", "link", "set", interfaccia, "address", nuovo_mac])
+
+    # Riattivazione della scheda di rete
+    subprocess.run(["ip", "link", "set", interfaccia, "up"])
+    print("Scheda di rete riattivata con successo.")
