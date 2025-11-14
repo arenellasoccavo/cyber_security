@@ -1,0 +1,11 @@
+--2025-11-13 09:36:51--  https://dl.winehq.org/wine-builds/Release.key
+Resolving dl.winehq.org (dl.winehq.org)... 2a04:4e42:39::729, 151.101.242.217
+Connecting to dl.winehq.org (dl.winehq.org)|2a04:4e42:39::729|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3122 (3.0K) [binary/octet-stream]
+Saving to: ‘STDOUT’
+
+-                      0%[                     ]       0  --.-KB/s               -                    100%[====================>]   3.05K  --.-KB/s    in 0s      
+
+2025-11-13 09:36:51 (60.4 MB/s) - written to stdout [3122/3122]
+
